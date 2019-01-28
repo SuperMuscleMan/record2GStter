@@ -1,5 +1,5 @@
 <idea-plugin version="2">
-  <id>com.your.company.unique.plugin.id</id>
+  <id>com.supermuscleman.record2gstter</id>
   <name>Record2GSetter</name>
   <version>1.0.0</version>
   <vendor email="SuperMuscleMan@outlook.com" url="https://github.com/SuperMuscleMan">SuperMuscleMan</vendor>
