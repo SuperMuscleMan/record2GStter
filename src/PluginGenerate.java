@@ -46,8 +46,7 @@ public class PluginGenerate extends AnAction {
             int exportIndex = findExport(codeString);
             final String finalCode = code;
             final String exportCode = export;
-//            codeString += code;
-//            document.setText(codeString);
+//          写入代码
             WriteCommandAction.runWriteCommandAction(project, () ->{
                        document.insertString(exportIndex, exportCode);
                         document.insertString(document.getTextLength(), finalCode);
