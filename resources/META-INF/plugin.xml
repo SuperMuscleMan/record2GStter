@@ -1,8 +1,10 @@
-<idea-plugin version="2">
+<idea-plugin>
   <id>com.supermuscleman.record2gstter</id>
   <name>Record2GSetter</name>
-  <version>1.1.0</version>
-  <vendor email="SuperMuscleMan@outlook.com" url="https://github.com/SuperMuscleMan">SuperMuscleMan</vendor>
+  <version>1.1.1</version>
+  <vendor email="SuperMuscleMan@outlook.com" url="https://github.com/SuperMuscleMan">
+    SuperMuscleMan
+  </vendor>
 
   <description><![CDATA[
       This is a small tool,Generating Getter and Setter code from Erlang records,Similar to Java,Only Erlang currently supported. <br>
@@ -19,21 +21,25 @@
 
   <change-notes><![CDATA[
       *************************************<br>
+      1.1.1 (2020-02-06).<br>
+      -----------------------<br>
+      - 1.Fix export statement error when there are multiple objects.<br>
+      <br>
+      *************************************<br>
       1.1.0 (2019-01-25).<br>
       -----------------------<br>
       - 1.Export the Getter Setter method.<br>
-      - 2.Add a guide dynamic diagram to the introduction page.
-      <br><br>
+      - 2.Add a guide dynamic diagram to the introduction page.<br>
+      <br>
       *************************************<br>
       1.0.0 (2019-01-25).<br>
       -----------------------<br>
-      - Birth.
-      <br><br>
+      - Birth.<br>
+      <br>
     ]]>
   </change-notes>
-
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="145.0"/>
+  <idea-version since-build="173.0"/>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
@@ -46,8 +52,14 @@
   </extensions>
 
   <actions>
-    <!-- Add your actions here -->
-    <action id="GetterSetter.PluginGenerate" class="PluginGenerate" text="record2GSetter" description="在 Erlang 语言中，模仿Java类的GetterSetter">
+    <!--    &lt;!&ndash; Add your actions here &ndash;&gt;-->
+    <!--    <action id="GetterSetter.PluginGenerate" class="PluginGenerate" text="record2GSetter"-->
+    <!--      description="在 Erlang 语言中，模仿Java类的GetterSetter">-->
+    <!--      <add-to-group group-id="CodeMenu" anchor="last"/>-->
+    <!--      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt 0"/>-->
+    <!--    </action>-->
+    <action id="GetterSetter.PluginGenerate" class="PluginGenerate" text="Record2GSetter"
+      description="在 Erlang 语言中，模仿Java类的GetterSetter">
       <add-to-group group-id="CodeMenu" anchor="last"/>
       <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt 0"/>
     </action>
