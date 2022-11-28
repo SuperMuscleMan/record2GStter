@@ -59,7 +59,7 @@ public class PluginGenerate extends AnAction {
   //在文档中找出record标签
   private static List<String> findRecord(String text) {
     text = text.replaceAll("%.*", "");
-    String pattern = "(-record\\([\\w\\s,\\{=\\\"\\[\\]\\}]*\\).)";
+    String pattern = "(-record\\([\\w\\s,\\{=(\\\"\\[\\]|\\\"\\[\\]::[\\])\\}]*\\).)";
     Pattern p = Pattern.compile(pattern);
     Matcher matcher = p.matcher(text);
     List<String> record = new ArrayList<>();
